@@ -193,7 +193,7 @@ function Hero() {
               src={brand.mark}
               alt=""
               aria-hidden
-              className={`absolute -bottom-8 -left-8 w-24 transition-opacity duration-1000 ${ready ? "opacity-100" : "opacity-0"}`}
+              className={`absolute -top-10 -left-12 w-20 transition-opacity duration-1000 ${ready ? "opacity-100" : "opacity-0"}`}
               style={{
                 transform: `translate3d(${pointer.x * 30}px, ${pointer.y * 24}px, 0) rotate(${pointer.x * 20}deg)`,
                 transition: "transform 800ms cubic-bezier(0.16,1,0.3,1), opacity 1s",
