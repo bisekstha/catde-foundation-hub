@@ -970,8 +970,8 @@ ul {
 
 .project-block {
   border-bottom: 1px solid var(--border);
-  padding: 88px 0;
-  scroll-margin-top: 112px;
+  padding: 56px 0;
+  scroll-margin-top: 96px;
 }
 
 .project-block:last-of-type {
@@ -980,7 +980,7 @@ ul {
 
 @media (min-width: 1024px) {
   .project-block {
-    padding: 128px 0;
+    padding: 72px 0;
   }
 }
 
