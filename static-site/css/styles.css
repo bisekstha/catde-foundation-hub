@@ -643,12 +643,12 @@ ul {
 /* ---------------- sections ---------------- */
 
 .section {
-  padding: 88px 0;
+  padding: 56px 0 72px;
 }
 
 @media (min-width: 1024px) {
   .section {
-    padding: 128px 0;
+    padding: 72px 0 96px;
   }
 }
 
