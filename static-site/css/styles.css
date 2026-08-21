@@ -333,10 +333,10 @@ ul {
     opacity: 0;
   }
   10% {
-    opacity: 0.75;
+    opacity: 0.5;
   }
   90% {
-    opacity: 0.45;
+    opacity: 0.3;
   }
   100% {
     transform: translate3d(var(--drift, 5vw), 110vh, 0) rotate(420deg);
@@ -713,7 +713,7 @@ ul {
   gap: 40px;
   width: max-content;
   white-space: nowrap;
-  animation: marquee 38s linear infinite;
+  animation: marquee 60s linear infinite;
 }
 
 .marquee-track span {
