@@ -47,3 +47,19 @@ and `projects.html#jam-fruit-tree-literary-house`.
   `@font-face` block.
 - Animations respect `prefers-reduced-motion`.
 - Update the `<link rel="canonical">` URLs if you host on a different domain.
+
+## Journal templates (list + single view)
+
+- `journal.html` — list view: one featured entry (`.post-featured`) plus a
+  responsive card grid (`.post-grid` / `.post-card`). To add an entry, copy an
+  `<article class="post-card">` block and swap date, place, title, excerpt,
+  image and link.
+- `journal-gory-manor-house.html`, `journal-jam-fruit-tree.html`,
+  `journal-founding.html` — single view template. Copy one to
+  `journal-<slug>.html`, then update the `<title>`, meta description,
+  og tags, canonical URL, hero eyebrow/date/place, `.article-figure` image and
+  caption, `.article-body` content, tags and prev/next links — then add a
+  matching card to `journal.html`.
+
+Inside `.article-body` you can use paragraphs, `h2` section headings,
+`blockquote` pull-quotes and `ul` lists with marigold bullet markers.
