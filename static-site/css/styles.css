@@ -176,19 +176,19 @@ ul {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 16px 20px;
+  padding: 10px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 @media (min-width: 640px) {
   .header-inner {
-    padding: 16px 32px;
+    padding: 12px 32px;
   }
 }
 
 .logo img {
-  height: 32px;
+  height: 28px;
   width: auto;
   max-width: 240px;
   object-fit: contain;
@@ -1461,4 +1461,236 @@ ul {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--ink-soft);
+}
+
+
+/* ---------------- pagination ---------------- */
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 44px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.pagination a,
+.pagination span {
+  min-width: 38px;
+  padding: 9px 12px;
+  text-align: center;
+  border: 1px solid var(--border);
+  background: var(--card);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  transition:
+    color 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+}
+
+.pagination a:hover {
+  color: var(--marigold-deep);
+  border-color: var(--marigold);
+}
+
+.pagination .is-current {
+  color: var(--ink);
+  border-color: var(--marigold);
+  background: var(--paper-soft);
+}
+
+.pagination .is-disabled {
+  opacity: 0.4;
+}
+
+.pagination-note {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* ---------------- filter chips ---------------- */
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 26px;
+}
+
+.chip {
+  padding: 7px 14px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  font-size: 0.64rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  transition:
+    color 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+}
+
+.chip:hover,
+.chip.is-active {
+  color: var(--marigold-deep);
+  border-color: var(--marigold);
+}
+
+/* ---------------- template B: news (dense rows) ---------------- */
+
+.news-list {
+  border-top: 1px solid var(--border);
+}
+
+.news-row {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.4s var(--ease);
+}
+
+@media (min-width: 760px) {
+  .news-row {
+    grid-template-columns: 132px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+.news-row:hover {
+  background: var(--paper-soft);
+}
+
+.news-row .date {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.news-row h3 {
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.news-row p {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: rgba(33, 29, 24, 0.82);
+}
+
+.news-kicker {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-size: 0.6rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--marigold-deep);
+}
+
+.news-row .thumb {
+  width: 100%;
+  max-width: 132px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
+/* ---------------- template C: programme cards (wide alternating rows) ---------------- */
+
+.prog-row {
+  display: grid;
+  gap: 26px;
+  padding: 34px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+@media (min-width: 900px) {
+  .prog-row {
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 48px;
+  }
+  .prog-row.is-flipped .media {
+    order: 2;
+  }
+}
+
+.prog-row .media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lift);
+}
+
+.prog-row h3 {
+  margin-top: 8px;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+}
+
+.prog-row p {
+  margin-top: 12px;
+  color: rgba(33, 29, 24, 0.85);
+}
+
+.fact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.fact {
+  border-left: 2px solid var(--marigold);
+  padding-left: 12px;
+}
+
+.fact dt {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.fact dd {
+  margin: 4px 0 0;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+}
+
+.article-with-aside {
+  display: grid;
+  gap: 34px;
+  max-width: 66rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 980px) {
+  .article-with-aside {
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 52px;
+    align-items: start;
+  }
+}
+
+.aside-card {
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 20px;
+}
+
+.aside-card + .aside-card {
+  margin-top: 18px;
 }
